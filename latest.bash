@@ -6,8 +6,8 @@
 clear
 echo
 echo
-echo "Cookie clicker V0.0.13" 
-actual=013
+echo "Cookie clicker V0.0.14" 
+actual=014
 echo
 echo "----------------------"
 echo "Escribe N para iniciar"
@@ -61,9 +61,31 @@ fi
 #Empezar el juego
 while true
 do
+			if [[ $aaa == troll ]]
+			then
+			clear
+			echo "░░░░░▄▄▄▄▀▀▀▀▀▀▀▀▄▄▄▄▄▄░░░░░░░"
+			echo "░░░░░█░░░░▒▒▒▒▒▒▒▒▒▒▒▒░░▀▀▄░░░░"
+			echo "░░░░█░░░▒▒▒▒▒▒░░░░░░░░▒▒▒░░█░░░"
+			echo "░░░█░░░░░░▄██▀▄▄░░░░░▄▄▄░░░░█░░"
+			echo "░▄▀▒▄▄▄▒░█▀▀▀▀▄▄█░░░██▄▄█░░░░█░"
+			echo "█░▒█▒▄░▀▄▄▄▀░░░░░░░░█░░░▒▒▒▒▒░█"
+			echo "█░▒█░█▀▄▄░░░░░█▀░░░░▀▄░░▄▀▀▀▄▒█ Troleado xd"
+			echo "░█░▀▄░█▄░█▀▄▄░▀░▀▀░▄▄▀░░░░█░░█░"
+			echo "░░█░░░▀▄▀█▄▄░█▀▀▀▄▄▄▄▀▀█▀██░█░░"
+			echo "░░░█░░░░██░░▀█▄▄▄█▄▄█▄████░█░░░"
+			echo "░░░░█░░░░▀▀▄░█░░░█░█▀██████░█░░"
+			echo "░░░░░▀▄░░░░░▀▀▄▄▄█▄█▄█▄█▄▀░░█░░"
+			echo "░░░░░░░▀▄▄░▒▒▒▒░░░░░░░░░░▒░░░█░"
+			echo "░░░░░░░░░░▀▀▄▄░▒▒▒▒▒▒▒▒▒▒░░░░█░"
+			echo "░░░░░░░░░░░░░░▀▄▄▄▄▄░░░░░░░░█░░"
+			galletas=0
+			read -s
+			else
 			clear
 			echo -n "Galletas=$galletas "
 			echo $galletas > .cookies_save #Sistema de guardado, se podria refinar con TRAP, para solo guardar a la salida, ETA NEVER
 			read -s
 			let "galletas=galletas+1"
+			fi
 done
