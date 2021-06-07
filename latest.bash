@@ -39,7 +39,7 @@ sleep 1.5
 wget https://raw.githubusercontent.com/cookies-in-bash/main/main/latest.bash -O $0
 clear
 echo "Version $version_1 encontrada en el repositorio, se han ajustado los permisos e instalado. Se ha actualizado de $actual a $version_1"
-
+echo "Lista de novedades: https://raw.githubusercontent.com/cookies-in-bash/main/main/cambios.txt"
 else
 clear
 echo "La version que tienes ($actual) ya es la mas reciente"
