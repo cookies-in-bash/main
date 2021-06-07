@@ -6,7 +6,7 @@
 clear
 echo
 echo
-echo "Cookie clicker V0.0.9" 
+echo "Cookie clicker V0.0.10" 
 #Historial de versiones:
 # 0.0.0: Primera prueba, agregar un sistema de guardado basico que determina una variable 0 o el contenido de un archivo oculto llamado .cookies_save
 # 0.0.1: Poca cosa, el juego en si, un bucle while true y un read para hacer "clicks"
@@ -17,7 +17,8 @@ echo "Cookie clicker V0.0.9"
 # 0.0.6: Dummy test 2
 # 0.0.7: Actualizacion que mejora algo la presentacion del actualizador
 # 0.0.8: Mejoras generales
-actual=009
+# 0.0.9 Arregladas algunas cosas
+actual=010
 echo
 echo "----------------------"
 echo "Escribe N para iniciar"
