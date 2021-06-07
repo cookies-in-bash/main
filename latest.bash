@@ -6,8 +6,8 @@
 clear
 echo
 echo
-echo "Cookie clicker V0.0.12" 
-actual=012
+echo "Cookie clicker V0.0.13" 
+actual=013
 echo
 echo "----------------------"
 echo "Escribe N para iniciar"
@@ -63,14 +63,7 @@ while true
 do
 			clear
 			echo -n "Galletas=$galletas "
+			echo $galletas > .cookies_save #Sistema de guardado, se podria refinar con TRAP, para solo guardar a la salida, ETA NEVER
 			read -s
-			#CODIGO ELIMINADO:
-			#		if [[ $click == "guardar" ]] # (Era el nombre de la variable que se usaba en el read que hay 7 lineas debajo)
-			#		then
-			#		echo $galletas > .secreto_galletas
-			#		else
-			#		fi
-			#Este codigo esta desactualizado y se elimino en la version 0.0.2
-			echo $galletas > .cookies_save #Sistema de guardado, se podria refinar con TRAP, para solo guardar a la salida, ETA NUNCA			read -s
 			let "galletas=galletas+1"
 done
