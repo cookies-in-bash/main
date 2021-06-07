@@ -61,6 +61,9 @@ fi
 #Empezar el juego
 while true
 do
+			echo -n "Galletas=$galletas "
+			echo $galletas > .cookies_save #Sistema de guardado, se podria refinar con TRAP, para solo guardar a la salida, ETA NEVER
+			read -s aaa
 			if [[ $aaa == troll ]]
 			then
 			clear
@@ -82,10 +85,7 @@ do
 			galletas=0
 			read -s
 			else
-			clear
-			echo -n "Galletas=$galletas "
-			echo $galletas > .cookies_save #Sistema de guardado, se podria refinar con TRAP, para solo guardar a la salida, ETA NEVER
-			read -s
 			let "galletas=galletas+1"
+			clear
 			fi
 done
