@@ -10,3 +10,4 @@ Historial de versiones:
 0.0.8: Mejoras generales
 0.0.9: Arregladas algunas cosas
 0.0.10: Arreglado el sistema de guardado, ahora se mantiene a traves de diferentes versiones (Excepto 0.0.3 -> 0.0.9)
+0.0.11: Dummy test 3
