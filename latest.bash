@@ -6,15 +6,15 @@ trap 'echo $galletas > .cookies_save ; exit' ERR EXIT
 clear
 echo
 echo
-echo "Cookie clicker V0.0.5" 
+echo "Cookie clicker V0.0.6" 
 #Historial de versiones:
 # 0.0.0: Primera prueba, agregar un sistema de guardado basico que determina una variable 0 o el contenido de un archivo oculto llamado .cookies_save
 # 0.0.1: Poca cosa, el juego en si, un bucle while true y un read para hacer "clicks"
 # 0.0.2: Arreglos generales, mejora al llegar a 250 galletas, no opcional (Por ahora)
 # 0.0.3: Revertidos los cambios de la version 0.0.2, implementado un sistema de guardado mejorado.
 # 0.0.4: Implementada forma de actualizar el juego, a traves de un repositorio en github
-#
-actual=005
+# 0.0.5: Dummy test (Prueba sin importancia)
+actual=006
 echo
 echo "----------------------"
 echo "Escribe N para iniciar"
@@ -43,10 +43,12 @@ version_1=$(curl https://raw.githubusercontent.com/cookies-in-bash/main/main/ver
 if [[ $version_1 > $actual ]]
 then
 echo "Version $version_1 encontrada en el repositorio, tu tienes la version $actual, actualizando"
+sleep 1.5
 wget https://raw.githubusercontent.com/cookies-in-bash/main/main/latest.bash -O $0
 
 
 else
+clear
 echo "La version que tienes ($actual) ya es la mas reciente"
 fi
 
