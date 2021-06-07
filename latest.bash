@@ -6,8 +6,8 @@
 clear
 echo
 echo
-echo "Cookie clicker V0.0.11" 
-actual=011
+echo "Cookie clicker V0.0.12" 
+actual=012
 echo
 echo "----------------------"
 echo "Escribe N para iniciar"
@@ -74,6 +74,3 @@ do
 			echo $galletas > .cookies_save #Sistema de guardado, se podria refinar con TRAP, para solo guardar a la salida, ETA NUNCA			read -s
 			let "galletas=galletas+1"
 done
-
-
-
