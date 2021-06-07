@@ -1,12 +1,12 @@
 #!/bin/bash
 #""""Cookie Clicker"""" version cutre en Bash, implementado:--- [X]=V3 Guardar/Restaurar // [ ELIMINADO (0.0.3) ] Niveles/Mas galletas por click llegados a cierto punto // [ ] Galletas automaticas // [ ] Actualizador (Si es que alguien quiere jugar a esto)
 
-trap 'echo $galletas > .cookies_save ; exit' ERR EXIT
+#trap 'echo $galletas > .cookies_save ; exit' ERR EXIT # No usable con el actualizador ----------------------------
 
 clear
 echo
 echo
-echo "Cookie clicker V0.0.8" 
+echo "Cookie clicker V0.0.9" 
 #Historial de versiones:
 # 0.0.0: Primera prueba, agregar un sistema de guardado basico que determina una variable 0 o el contenido de un archivo oculto llamado .cookies_save
 # 0.0.1: Poca cosa, el juego en si, un bucle while true y un read para hacer "clicks"
@@ -16,7 +16,8 @@ echo "Cookie clicker V0.0.8"
 # 0.0.5: Dummy test (Prueba sin importancia)
 # 0.0.6: Dummy test 2
 # 0.0.7: Actualizacion que mejora algo la presentacion del actualizador
-actual=008
+# 0.0.8: Mejoras generales
+actual=009
 echo
 echo "----------------------"
 echo "Escribe N para iniciar"
@@ -47,7 +48,7 @@ then
 sleep 1.5
 wget https://raw.githubusercontent.com/cookies-in-bash/main/main/latest.bash -O $0
 clear
-echo "Version $version_1 encontrada en el repositorio, tu tienes la version $actual, actualizando"
+echo "Version $version_1 encontrada en el repositorio, se han ajustado los permisos e instalado. Se ha actualizado de $actual a $version_1"
 
 else
 clear
@@ -73,14 +74,13 @@ do
 			clear
 			echo -n "Galletas=$galletas "
 			#CODIGO ELIMINADO:
-			#		if [[ $click (Era el nombre de la variable que se usaba en el read que hay 7 lineas debajo) == "guardar" ]]
+			#		if [[ $click == "guardar" ]] # (Era el nombre de la variable que se usaba en el read que hay 7 lineas debajo)
 			#		then
 			#		echo $galletas > .secreto_galletas
 			#		else
 			#		fi
 			#Este codigo esta desactualizado y se elimino en la version 0.0.2
-			#---echo $galletas > .cookies_save #Sistema de guardado, se podria refinar con TRAP, para solo guardar a la salida, ETA 0.1.0---### DEPRECADO ### Ahora 				se va a usar TRAP
-			read -s
+			echo $galletas > .cookies_save #Sistema de guardado, se podria refinar con TRAP, para solo guardar a la salida, ETA NUNCA			read -s
 			let "galletas=galletas+1"
 done
 
