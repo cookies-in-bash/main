@@ -73,6 +73,7 @@ while true
 do
 			clear
 			echo -n "Galletas=$galletas "
+			read -s
 			#CODIGO ELIMINADO:
 			#		if [[ $click == "guardar" ]] # (Era el nombre de la variable que se usaba en el read que hay 7 lineas debajo)
 			#		then
