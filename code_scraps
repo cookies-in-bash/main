@@ -1,0 +1,31 @@
+  ##Codigo que guarda bajo demanda
+      #   if [[ $click == "guardar" ]] # (Era el nombre de la variable que se usaba en el read que hay 7 lineas debajo)
+			#		then
+			#		echo $galletas > .secreto_galletas
+			#		else
+			#		fi
+			###Este codigo esta desactualizado y se elimino en la version 0.0.2
+      
+      
+      
+  ##Codigo que guarda cuando sales del programa (CTRL+C)
+      #trap 'echo $cookies > cookie_save' EXIT
+      
+      
+  ##Bucle que falla al contar 1+2+$galletas (REPRESENTACION)
+      #if [[ .... Bucle 1 con while (1 galleta) ]]
+          ##else; then [[ Bucle 2 con while (2 galletas) ]]
+                  ---> Error, aunque se declara que cuente O UNO O EL OTRO, acaba contando ambos, uno tras otro, haciendo el contador algo como:
+                  Galletas: 100 [Enter]
+                  Galletas: 102 [Enter]
+                  Galletas: 103 [Enter]
+                  (Vuelve arriba)
+    
+  ##Trollface (Probablemente, dentro de poco)
+      #if [[ $aaa == trollface ]]
+      #then
+      #cookies=0
+      #echo "(TROLLFACE)"
+      #echo "Trolleado xd"
+      #else (NADA)
+      #fi
