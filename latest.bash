@@ -1,6 +1,6 @@
 #!/bin/bash
 #""""Cookie Clicker"""" version cutre en Bash, implementado:--- [ ELIMINADO (0.0.3) ] Niveles/Mas galletas por click llegados a cierto punto // [ ] Galletas automaticas // [x] Actualizador (Si es que alguien quiere jugar a esto)
-
+actual=019
 trap 'echo $galletas > .cookies_save ; exit' ERR EXIT # --No usable con el actualizador-- (Lo mirare mas tarde)-- (Creo que esta arreglado)
 
 if [[ $1 == "--debug" ]]
@@ -8,7 +8,7 @@ then
 clear
 echo
 echo
-echo "Cookie clicker V0.0.18 (MODO DEBUG)"
+echo "Cookie clicker V0.0.19 (MODO DEBUG)"
 echo
 echo "----------------------"
 echo "Modo debug"
@@ -54,8 +54,7 @@ else
 clear
 echo
 echo
-echo "Cookie clicker V0.0.18" 
-actual=017
+echo "Cookie clicker V0.0.19" 
 echo
 echo "----------------------"
 echo "Escribe N para iniciar"
