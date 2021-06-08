@@ -8,7 +8,7 @@ then
 clear
 echo
 echo
-echo "Cookie clicker V0.0.17 (MODO DEBUG)"
+echo "Cookie clicker V0.0.18 (MODO DEBUG)"
 echo
 echo "----------------------"
 echo "Modo debug"
@@ -54,7 +54,7 @@ else
 clear
 echo
 echo
-echo "Cookie clicker V0.0.17" 
+echo "Cookie clicker V0.0.18" 
 actual=017
 echo
 echo "----------------------"
