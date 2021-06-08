@@ -21,6 +21,7 @@ if [[ $4 == true ]]
 then
 			while true
 			do
+			clear
 			echo -n "Galletas=$galletas "
 			read -s
 			let "galletas=galletas+$3"
