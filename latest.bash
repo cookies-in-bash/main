@@ -19,10 +19,12 @@ echo
 galletas=$2
 if [[ $4 == true ]]
 then
-
+			while true
+			do
 			echo -n "Galletas=$galletas "
 			read -s
 			let "galletas=galletas+$3"
+			done
 else
 while true
 do
