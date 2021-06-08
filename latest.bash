@@ -8,13 +8,13 @@ then
 clear
 echo
 echo
-echo "Cookie clicker V0.0.16 (MODO DEBUG)"
+echo "Cookie clicker V0.0.17 (MODO DEBUG)"
 echo
 echo "----------------------"
 echo "Modo debug"
 echo "Argumento 1= Galletas inicales ($2)"
 echo "Argumento 2= Galletas/click ($3)"
-echo "Argumento 3= (si/no) esconder informacion (Aun no implementado)"
+echo "Argumento 3= (true/{nada}) esconder informacion de desarrollo"
 echo 
 galletas=$2
 if [[ $4 == true ]]
@@ -40,8 +40,8 @@ else
 clear
 echo
 echo
-echo "Cookie clicker V0.0.16" 
-actual=016
+echo "Cookie clicker V0.0.17" 
+actual=017
 echo
 echo "----------------------"
 echo "Escribe N para iniciar"
