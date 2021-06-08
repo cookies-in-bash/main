@@ -17,3 +17,5 @@ Historial de versiones:
 0.0.15: Revertidos los cambios de 0.0.13, añadido modo debug ([RUTA] --debug [ galletas inicales (Num. entero) ] [ Galletas/click (Num.entero o decimal) ]
 0.0.16: Arreglado TRAP (Nuevo modo de guardado)
 0.0.17: 4ºta opcion de modo debug; true = esconder informacion de desarrollo.
+0.0.18: --force-update fuerza la re-descarga o actualizacion/downgrade del programa
+0.0.19: Hotfix
