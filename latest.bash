@@ -40,6 +40,17 @@ do
 done
 fi
 else
+	if [[ $1 == "--force-update" ]]
+	then
+	version_1=$(curl https://raw.githubusercontent.com/cookies-in-bash/main/main/version)
+	wget https://raw.githubusercontent.com/cookies-in-bash/main/main/latest.bash -O $0
+	galletas=$(cat .cookies_save)
+	clear
+	echo "Version $version_1 encontrada en el repositorio. Se ha actualizado a $version_1"
+	echo "Lista de novedades: https://raw.githubusercontent.com/cookies-in-bash/main/main/cambios.txt"
+	echo "-------Actualizacion forzada--------"
+	exit
+	fi
 clear
 echo
 echo
