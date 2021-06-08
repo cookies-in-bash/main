@@ -15,3 +15,4 @@ Historial de versiones:
 0.0.13: Fix actualizador no recargando (Clear curl cache)
 0.0.14: We do a lil' trolling
 0.0.15: Revertidos los cambios de 0.0.13, añadido modo debug ([RUTA] --debug [ galletas inicales (Num. entero) ] [ Galletas/click (Num.entero o decimal) ]
+0.0.16: Arreglado TRAP (Nuevo modo de guardado)
