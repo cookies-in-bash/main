@@ -17,6 +17,13 @@ echo "Argumento 2= Galletas/click ($3)"
 echo "Argumento 3= (si/no) esconder informacion (Aun no implementado)"
 echo 
 galletas=$2
+if [[ $4 == true ]]
+then
+
+			echo -n "Galletas=$galletas "
+			read -s
+			let "galletas=galletas+$3"
+else
 while true
 do
 			echo -n "Galletas=$galletas "
@@ -28,7 +35,7 @@ do
 			let "galletas=galletas+$3"
 			echo "+$3"
 done
-
+fi
 else
 clear
 echo
