@@ -1,13 +1,40 @@
 #!/bin/bash
-#""""Cookie Clicker"""" version cutre en Bash, implementado:--- [X]=V3 Guardar/Restaurar // [ ELIMINADO (0.0.3) ] Niveles/Mas galletas por click llegados a cierto punto // [ ] Galletas automaticas // [ ] Actualizador (Si es que alguien quiere jugar a esto)
+#""""Cookie Clicker"""" version cutre en Bash, implementado:--- [ ELIMINADO (0.0.3) ] Niveles/Mas galletas por click llegados a cierto punto // [ ] Galletas automaticas // [x] Actualizador (Si es que alguien quiere jugar a esto)
 
-#trap 'echo $galletas > .cookies_save ; exit' ERR EXIT # No usable con el actualizador ----------------------------
+#trap 'echo $galletas > .cookies_save ; exit' ERR EXIT # No usable con el actualizador ---------------------------- (Lo mirare mas tarde)
 
+if [[ $1 == "--debug" ]]
+then
 clear
 echo
 echo
-echo "Cookie clicker V0.0.14" 
-actual=014
+echo "Cookie clicker V0.0.15 (MODO DEBUG)"
+echo
+echo "----------------------"
+echo "Modo debug"
+echo "Argumento 1= Galletas inicales ($2)"
+echo "Argumento 2= Galletas/click ($3)"
+echo "Argumento 3= (si/no) esconder informacion (Aun no implementado)"
+echo 
+galletas=$2
+while true
+do
+			echo -n "Galletas=$galletas "
+			echo -n "Nueva linea"
+			echo $galletas > .cookies_save
+			echo Guardado! 
+			read -s aaa
+			echo "Leido $aaa"
+			let "galletas=galletas+$3"
+			echo "+$3"
+done
+
+else
+clear
+echo
+echo
+echo "Cookie clicker V0.0.15" 
+actual=015
 echo
 echo "----------------------"
 echo "Escribe N para iniciar"
@@ -35,7 +62,9 @@ then
 version_1=$(curl https://raw.githubusercontent.com/cookies-in-bash/main/main/version)
 if [[ $version_1 > $actual ]]
 then
-sleep 1.5
+
+# Eliminar delay no necesario
+
 wget https://raw.githubusercontent.com/cookies-in-bash/main/main/latest.bash -O $0
 clear
 echo "Version $version_1 encontrada en el repositorio, se han ajustado los permisos e instalado. Se ha actualizado de $actual a $version_1"
@@ -44,10 +73,6 @@ else
 clear
 echo "La version que tienes ($actual) ya es la mas reciente"
 fi
-
-
-
-
 exit
 fi
 echo "No te entiendo!"
@@ -62,30 +87,9 @@ fi
 while true
 do
 			echo -n "Galletas=$galletas "
-			echo $galletas > .cookies_save #Sistema de guardado, se podria refinar con TRAP, para solo guardar a la salida, ETA NEVER
+			echo $galletas > .cookies_save #Sistema de guardado, se podria refinar con TRAP, para solo guardar a la salida, ETA NEVER, causa problemas al actualizar
 			read -s aaa
-			if [[ $aaa == troll ]]
-			then
-			clear
-			echo "░░░░░▄▄▄▄▀▀▀▀▀▀▀▀▄▄▄▄▄▄░░░░░░░"
-			echo "░░░░░█░░░░▒▒▒▒▒▒▒▒▒▒▒▒░░▀▀▄░░░░"
-			echo "░░░░█░░░▒▒▒▒▒▒░░░░░░░░▒▒▒░░█░░░"
-			echo "░░░█░░░░░░▄██▀▄▄░░░░░▄▄▄░░░░█░░"
-			echo "░▄▀▒▄▄▄▒░█▀▀▀▀▄▄█░░░██▄▄█░░░░█░"
-			echo "█░▒█▒▄░▀▄▄▄▀░░░░░░░░█░░░▒▒▒▒▒░█"
-			echo "█░▒█░█▀▄▄░░░░░█▀░░░░▀▄░░▄▀▀▀▄▒█ Troleado xd"
-			echo "░█░▀▄░█▄░█▀▄▄░▀░▀▀░▄▄▀░░░░█░░█░"
-			echo "░░█░░░▀▄▀█▄▄░█▀▀▀▄▄▄▄▀▀█▀██░█░░"
-			echo "░░░█░░░░██░░▀█▄▄▄█▄▄█▄████░█░░░"
-			echo "░░░░█░░░░▀▀▄░█░░░█░█▀██████░█░░"
-			echo "░░░░░▀▄░░░░░▀▀▄▄▄█▄█▄█▄█▄▀░░█░░"
-			echo "░░░░░░░▀▄▄░▒▒▒▒░░░░░░░░░░▒░░░█░"
-			echo "░░░░░░░░░░▀▀▄▄░▒▒▒▒▒▒▒▒▒▒░░░░█░"
-			echo "░░░░░░░░░░░░░░▀▄▄▄▄▄░░░░░░░░█░░"
-			galletas=0
-			read -s
-			else
 			let "galletas=galletas+1"
 			clear
-			fi
 done
+fi
