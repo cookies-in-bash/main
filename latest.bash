@@ -45,7 +45,7 @@ do
 done
 fi
 else
-echo "Acesso denegado, este indicente a sido reportado"
+echo "Acesso denegado, este incidente a sido reportado"
 fi
 
 else
