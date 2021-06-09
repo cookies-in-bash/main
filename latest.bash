@@ -1,14 +1,19 @@
 #!/bin/bash
 #""""Cookie Clicker"""" version cutre en Bash, implementado:--- [ ELIMINADO (0.0.3) ] Niveles/Mas galletas por click llegados a cierto punto // [ ] Galletas automaticas // [x] Actualizador (Si es que alguien quiere jugar a esto)
-actual=019
+actual=020
 trap 'echo $galletas > .cookies_save ; exit' ERR EXIT # --No usable con el actualizador-- (Lo mirare mas tarde)-- (Creo que esta arreglado)
 
+
 if [[ $1 == "--debug" ]]
+then
+echo -n "Contraseña de desarrollador> "
+read -s kkk
+if [[ $kkk = password ]]
 then
 clear
 echo
 echo
-echo "Cookie clicker V0.0.19 (MODO DEBUG)"
+echo "Cookie clicker V0.0.20 (MODO DEBUG)"
 echo
 echo "----------------------"
 echo "Modo debug"
@@ -40,6 +45,10 @@ do
 done
 fi
 else
+echo "Acesso denegado, este indicente a sido reportado"
+fi
+
+else
 	if [[ $1 == "--force-update" ]]
 	then
 	version_1=$(curl https://raw.githubusercontent.com/cookies-in-bash/main/main/version)
@@ -54,7 +63,7 @@ else
 clear
 echo
 echo
-echo "Cookie clicker V0.0.19" 
+echo "Cookie clicker V0.0.20" 
 echo
 echo "----------------------"
 echo "Escribe N para iniciar"
