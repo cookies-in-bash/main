@@ -1,0 +1,14 @@
+#!/bin/bash
+cookies=$(cat .save_cookies)
+if [[ $cookies = "" ]]
+then
+cookies=0
+fi
+while true
+do
+clear
+echo Galletas: $cookies
+echo $cookies > .save_cookies
+let cookies=cookies+$2
+sleep $1
+done
