@@ -20,8 +20,9 @@
                   Galletas: 102 [Enter]
                   Galletas: 103 [Enter]
                   (Vuelve arriba)
-    
-  ##Trollface (Probablemente, dentro de poco)
+		  
+		  
+  ##Trollface (-Probablemente, dentro de poco-) #- NOPE
       #if [[ $aaa == trollface ]]
       #then
       #cookies=0
