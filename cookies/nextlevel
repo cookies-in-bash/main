@@ -1,0 +1,18 @@
+#!/bin/bash
+cookies=$(cat .save_cookies)
+# echo $cookies # Descomentar para probar
+if [ -f .mejora1 ]
+then
+echo "Ya tienes la mejora"
+else
+if (( $cookies > 250 ))
+then
+let cookies=cookies-250
+echo $cookies > .save_cookies
+echo 2 > .lvl2
+echo "Mejora completada"
+else
+echo "No tienes bastantes galletas; Necesarias: 250, tu tienes $cookies"
+fi
+fi
+
