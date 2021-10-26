@@ -20,3 +20,4 @@ Historial de versiones:
 0.0.18: --force-update fuerza la re-descarga o actualizacion/downgrade del programa
 0.0.19: Hotfix
 0.0.20: Establecida contraseña para debug (Por defecto "password")
+0.0.21: Arreglado badpass para crear un archivo cuando falle la contraseña del desarrollador.
